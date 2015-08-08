@@ -10,6 +10,7 @@
 #import <Masonry/Masonry.h>
 
 static NSInteger const DragImageViewSize = 23;
+static CGFloat   const ColorMinimumAlpha = 0.1;
 
 @interface KHMColorWheelView ()
 @property (nonatomic, readwrite, strong) UIColor *currentColor;
@@ -102,7 +103,7 @@ static NSInteger const DragImageViewSize = 23;
     
     //取色满足基本条件则回调颜色并移动接触点
     CGFloat red, green, blue, alpha;
-    if ( [pointColor getRed:&red green:&green blue:&blue alpha:&alpha] && alpha > 0.1) {
+    if ( [pointColor getRed:&red green:&green blue:&blue alpha:&alpha] && alpha > ColorMinimumAlpha) {
         
         self.currentColor = pointColor;
         
@@ -132,7 +133,7 @@ static NSInteger const DragImageViewSize = 23;
     UIColor *pointColor = [self.imageView.image colorAtPixel:touchPoint];
     
     CGFloat red, green, blue, alpha;
-    if ( [pointColor getRed:&red green:&green blue:&blue alpha:&alpha] && alpha > 0.1) {
+    if ( [pointColor getRed:&red green:&green blue:&blue alpha:&alpha] && alpha > ColorMinimumAlpha) {
         
         self.currentColor = pointColor;
         
