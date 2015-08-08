@@ -1,0 +1,515 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7955842F1B75BB4300F53CB0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7955842E1B75BB4300F53CB0 /* main.m */; };
+		795584321B75BB4300F53CB0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 795584311B75BB4300F53CB0 /* AppDelegate.m */; };
+		795584381B75BB4300F53CB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 795584361B75BB4300F53CB0 /* Main.storyboard */; };
+		7955843A1B75BB4300F53CB0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 795584391B75BB4300F53CB0 /* Images.xcassets */; };
+		7955843D1B75BB4300F53CB0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7955843B1B75BB4300F53CB0 /* LaunchScreen.xib */; };
+		795584491B75BB4300F53CB0 /* KHMColorWheelDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 795584481B75BB4300F53CB0 /* KHMColorWheelDemoTests.m */; };
+		795584541B75BB8100F53CB0 /* KHMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 795584531B75BB8100F53CB0 /* KHMViewController.m */; };
+		795584581B75BBC700F53CB0 /* KHMColorWheelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 795584571B75BBC700F53CB0 /* KHMColorWheelView.m */; };
+		7955845B1B75BC1200F53CB0 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 7955845A1B75BC1200F53CB0 /* UIImage+Color.m */; };
+		A2D3F9C2DE1998AAD6CFA055 /* libPods-KHMColorWheelDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EAD95FBDFC0982394409DD9 /* libPods-KHMColorWheelDemo.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		795584431B75BB4300F53CB0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 795584211B75BB4300F53CB0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 795584281B75BB4300F53CB0;
+			remoteInfo = KHMColorWheelDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		570BD58F1013ABB2C8326E45 /* Pods-KHMColorWheelDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KHMColorWheelDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KHMColorWheelDemo/Pods-KHMColorWheelDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		6432D1F6F3545C38F25663A6 /* Pods-KHMColorWheelDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KHMColorWheelDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-KHMColorWheelDemo/Pods-KHMColorWheelDemo.release.xcconfig"; sourceTree = "<group>"; };
+		795584291B75BB4300F53CB0 /* KHMColorWheelDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KHMColorWheelDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7955842D1B75BB4300F53CB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7955842E1B75BB4300F53CB0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		795584301B75BB4300F53CB0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		795584311B75BB4300F53CB0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		795584371B75BB4300F53CB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		795584391B75BB4300F53CB0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7955843C1B75BB4300F53CB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		795584421B75BB4300F53CB0 /* KHMColorWheelDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KHMColorWheelDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		795584471B75BB4300F53CB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		795584481B75BB4300F53CB0 /* KHMColorWheelDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KHMColorWheelDemoTests.m; sourceTree = "<group>"; };
+		795584521B75BB8100F53CB0 /* KHMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHMViewController.h; sourceTree = "<group>"; };
+		795584531B75BB8100F53CB0 /* KHMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHMViewController.m; sourceTree = "<group>"; };
+		795584561B75BBC700F53CB0 /* KHMColorWheelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHMColorWheelView.h; sourceTree = "<group>"; };
+		795584571B75BBC700F53CB0 /* KHMColorWheelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHMColorWheelView.m; sourceTree = "<group>"; };
+		795584591B75BC1200F53CB0 /* UIImage+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
+		7955845A1B75BC1200F53CB0 /* UIImage+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
+		7EAD95FBDFC0982394409DD9 /* libPods-KHMColorWheelDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KHMColorWheelDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		795584261B75BB4300F53CB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2D3F9C2DE1998AAD6CFA055 /* libPods-KHMColorWheelDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7955843F1B75BB4300F53CB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0BC30B66FFEBE19DADD9EB16 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				570BD58F1013ABB2C8326E45 /* Pods-KHMColorWheelDemo.debug.xcconfig */,
+				6432D1F6F3545C38F25663A6 /* Pods-KHMColorWheelDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		795584201B75BB4300F53CB0 = {
+			isa = PBXGroup;
+			children = (
+				7955842B1B75BB4300F53CB0 /* KHMColorWheelDemo */,
+				795584451B75BB4300F53CB0 /* KHMColorWheelDemoTests */,
+				7955842A1B75BB4300F53CB0 /* Products */,
+				0BC30B66FFEBE19DADD9EB16 /* Pods */,
+				C3DF83B91EF0D1DF61038D96 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7955842A1B75BB4300F53CB0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				795584291B75BB4300F53CB0 /* KHMColorWheelDemo.app */,
+				795584421B75BB4300F53CB0 /* KHMColorWheelDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7955842B1B75BB4300F53CB0 /* KHMColorWheelDemo */ = {
+			isa = PBXGroup;
+			children = (
+				795584551B75BBA600F53CB0 /* KHMColorWheelView */,
+				795584521B75BB8100F53CB0 /* KHMViewController.h */,
+				795584531B75BB8100F53CB0 /* KHMViewController.m */,
+				7955842C1B75BB4300F53CB0 /* Supporting Files */,
+			);
+			path = KHMColorWheelDemo;
+			sourceTree = "<group>";
+		};
+		7955842C1B75BB4300F53CB0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				795584301B75BB4300F53CB0 /* AppDelegate.h */,
+				795584311B75BB4300F53CB0 /* AppDelegate.m */,
+				795584361B75BB4300F53CB0 /* Main.storyboard */,
+				795584391B75BB4300F53CB0 /* Images.xcassets */,
+				7955843B1B75BB4300F53CB0 /* LaunchScreen.xib */,
+				7955842D1B75BB4300F53CB0 /* Info.plist */,
+				7955842E1B75BB4300F53CB0 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		795584451B75BB4300F53CB0 /* KHMColorWheelDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				795584481B75BB4300F53CB0 /* KHMColorWheelDemoTests.m */,
+				795584461B75BB4300F53CB0 /* Supporting Files */,
+			);
+			path = KHMColorWheelDemoTests;
+			sourceTree = "<group>";
+		};
+		795584461B75BB4300F53CB0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				795584471B75BB4300F53CB0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		795584551B75BBA600F53CB0 /* KHMColorWheelView */ = {
+			isa = PBXGroup;
+			children = (
+				795584591B75BC1200F53CB0 /* UIImage+Color.h */,
+				7955845A1B75BC1200F53CB0 /* UIImage+Color.m */,
+				795584561B75BBC700F53CB0 /* KHMColorWheelView.h */,
+				795584571B75BBC700F53CB0 /* KHMColorWheelView.m */,
+			);
+			path = KHMColorWheelView;
+			sourceTree = SOURCE_ROOT;
+		};
+		C3DF83B91EF0D1DF61038D96 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7EAD95FBDFC0982394409DD9 /* libPods-KHMColorWheelDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		795584281B75BB4300F53CB0 /* KHMColorWheelDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7955844C1B75BB4300F53CB0 /* Build configuration list for PBXNativeTarget "KHMColorWheelDemo" */;
+			buildPhases = (
+				7B39B823C3BE7BD91DC611C1 /* Check Pods Manifest.lock */,
+				795584251B75BB4300F53CB0 /* Sources */,
+				795584261B75BB4300F53CB0 /* Frameworks */,
+				795584271B75BB4300F53CB0 /* Resources */,
+				3597867BC1EA88C47471DFB0 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KHMColorWheelDemo;
+			productName = KHMColorWheelDemo;
+			productReference = 795584291B75BB4300F53CB0 /* KHMColorWheelDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		795584411B75BB4300F53CB0 /* KHMColorWheelDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7955844F1B75BB4300F53CB0 /* Build configuration list for PBXNativeTarget "KHMColorWheelDemoTests" */;
+			buildPhases = (
+				7955843E1B75BB4300F53CB0 /* Sources */,
+				7955843F1B75BB4300F53CB0 /* Frameworks */,
+				795584401B75BB4300F53CB0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				795584441B75BB4300F53CB0 /* PBXTargetDependency */,
+			);
+			name = KHMColorWheelDemoTests;
+			productName = KHMColorWheelDemoTests;
+			productReference = 795584421B75BB4300F53CB0 /* KHMColorWheelDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		795584211B75BB4300F53CB0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = KHM;
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = KevinHM;
+				TargetAttributes = {
+					795584281B75BB4300F53CB0 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					795584411B75BB4300F53CB0 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 795584281B75BB4300F53CB0;
+					};
+				};
+			};
+			buildConfigurationList = 795584241B75BB4300F53CB0 /* Build configuration list for PBXProject "KHMColorWheelDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 795584201B75BB4300F53CB0;
+			productRefGroup = 7955842A1B75BB4300F53CB0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				795584281B75BB4300F53CB0 /* KHMColorWheelDemo */,
+				795584411B75BB4300F53CB0 /* KHMColorWheelDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		795584271B75BB4300F53CB0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				795584381B75BB4300F53CB0 /* Main.storyboard in Resources */,
+				7955843D1B75BB4300F53CB0 /* LaunchScreen.xib in Resources */,
+				7955843A1B75BB4300F53CB0 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		795584401B75BB4300F53CB0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3597867BC1EA88C47471DFB0 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KHMColorWheelDemo/Pods-KHMColorWheelDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B39B823C3BE7BD91DC611C1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		795584251B75BB4300F53CB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				795584321B75BB4300F53CB0 /* AppDelegate.m in Sources */,
+				795584581B75BBC700F53CB0 /* KHMColorWheelView.m in Sources */,
+				7955845B1B75BC1200F53CB0 /* UIImage+Color.m in Sources */,
+				7955842F1B75BB4300F53CB0 /* main.m in Sources */,
+				795584541B75BB8100F53CB0 /* KHMViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7955843E1B75BB4300F53CB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				795584491B75BB4300F53CB0 /* KHMColorWheelDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		795584441B75BB4300F53CB0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 795584281B75BB4300F53CB0 /* KHMColorWheelDemo */;
+			targetProxy = 795584431B75BB4300F53CB0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		795584361B75BB4300F53CB0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				795584371B75BB4300F53CB0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7955843B1B75BB4300F53CB0 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7955843C1B75BB4300F53CB0 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7955844A1B75BB4300F53CB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7955844B1B75BB4300F53CB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7955844D1B75BB4300F53CB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 570BD58F1013ABB2C8326E45 /* Pods-KHMColorWheelDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KHMColorWheelDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7955844E1B75BB4300F53CB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6432D1F6F3545C38F25663A6 /* Pods-KHMColorWheelDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KHMColorWheelDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		795584501B75BB4300F53CB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KHMColorWheelDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KHMColorWheelDemo.app/KHMColorWheelDemo";
+			};
+			name = Debug;
+		};
+		795584511B75BB4300F53CB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KHMColorWheelDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KHMColorWheelDemo.app/KHMColorWheelDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		795584241B75BB4300F53CB0 /* Build configuration list for PBXProject "KHMColorWheelDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7955844A1B75BB4300F53CB0 /* Debug */,
+				7955844B1B75BB4300F53CB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7955844C1B75BB4300F53CB0 /* Build configuration list for PBXNativeTarget "KHMColorWheelDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7955844D1B75BB4300F53CB0 /* Debug */,
+				7955844E1B75BB4300F53CB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7955844F1B75BB4300F53CB0 /* Build configuration list for PBXNativeTarget "KHMColorWheelDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				795584501B75BB4300F53CB0 /* Debug */,
+				795584511B75BB4300F53CB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 795584211B75BB4300F53CB0 /* Project object */;
+}

@@ -1,0 +1,13 @@
+# Uncomment this line to define a global platform for your project
+
+platform :ios, '7.0'
+
+target 'KHMColorWheelDemo' do
+pod 'Masonry', '~>0.6.2'
+
+end
+
+target 'KHMColorWheelDemoTests' do
+
+end
+
