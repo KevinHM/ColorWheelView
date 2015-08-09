@@ -34,6 +34,19 @@ static CGFloat   const ColorMinimumAlpha = 0.1;
     return self;
 }
 
+//Support IB
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self setupDefaultVariables];
+        [self configuredViewHierarchy];
+        [self layoutComponents];
+        [self setupInteractionsOnComponents];
+    }
+    
+    return self;
+}
+
 #pragma mark - private method
 
 - (void)setupDefaultVariables {

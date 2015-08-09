@@ -15,7 +15,7 @@
 static NSInteger const KHMColorWheelViewSize = 230; //因为我使用的图片为这个尺寸 @2x\@3x
 
 @interface KHMViewController ()
-@property (nonatomic, strong) KHMColorWheelView *colorWheelView;
+@property (nonatomic, weak) IBOutlet KHMColorWheelView *colorWheelView;
 @property (nonatomic, strong) UIImageView *imageView;
 
 @end
@@ -54,17 +54,18 @@ static NSInteger const KHMColorWheelViewSize = 230; //因为我使用的图片�
 }
 
 - (void)configuredViewHierarchy {
-    [self.view addSubview:self.colorWheelView];
+//    manual code
+//    [self.view addSubview:self.colorWheelView];
     [self.view addSubview:self.imageView];
 }
 
 - (void)layoutComponents {
-    
-    [self.colorWheelView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.mas_equalTo(CGSizeMake(KHMColorWheelViewSize, KHMColorWheelViewSize));
-        make.centerY.equalTo(self.view.mas_centerY);
-        make.centerX.equalTo(self.view.mas_centerX);
-    }];
+// manual code
+//    [self.colorWheelView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.size.mas_equalTo(CGSizeMake(KHMColorWheelViewSize, KHMColorWheelViewSize));
+//        make.centerY.equalTo(self.view.mas_centerY);
+//        make.centerX.equalTo(self.view.mas_centerX);
+//    }];
     
     [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(80, 40));
@@ -75,14 +76,14 @@ static NSInteger const KHMColorWheelViewSize = 230; //因为我使用的图片�
 
 
 #pragma mark - Getter/Setter
-
-- (KHMColorWheelView *)colorWheelView {
-    if (!_colorWheelView) {
-        _colorWheelView = [[KHMColorWheelView alloc] init];
-    }
-    
-    return _colorWheelView;
-}
+// manual code
+//- (KHMColorWheelView *)colorWheelView {
+//    if (!_colorWheelView) {
+//        _colorWheelView = [[KHMColorWheelView alloc] init];
+//    }
+//    
+//    return _colorWheelView;
+//}
 
 - (UIImageView *)imageView {
     if (!_imageView) {

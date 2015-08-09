@@ -15,8 +15,25 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hdV-jK-8du" customClass="KHMColorWheelView">
+                                <rect key="frame" x="185" y="185" width="230" height="230"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="I95-2V-EcE"/>
+                                    <constraint firstAttribute="width" constant="230" id="Rjb-B1-75N"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="hdV-jK-8du" secondAttribute="centerX" id="Z4F-vQ-C2o"/>
+                            <constraint firstAttribute="centerY" secondItem="hdV-jK-8du" secondAttribute="centerY" id="guI-jv-O0P"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="colorWheelView" destination="hdV-jK-8du" id="GEp-PY-bz0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
