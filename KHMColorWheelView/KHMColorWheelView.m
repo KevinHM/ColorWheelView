@@ -71,10 +71,16 @@ static CGFloat   const ColorMinimumAlpha = 0.1;
 }
 
 - (void)setupInteractionsOnComponents {
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapEvent:)];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(tapEvent:)];
+    
     [self.imageView addGestureRecognizer:tap];
     
-    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panEvent:)];
+    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(panEvent:)];
+    
     [self.imageView addGestureRecognizer:pan];
 }
 
@@ -116,7 +122,8 @@ static CGFloat   const ColorMinimumAlpha = 0.1;
     
     //取色满足基本条件则回调颜色并移动接触点
     CGFloat red, green, blue, alpha;
-    if ( [pointColor getRed:&red green:&green blue:&blue alpha:&alpha] && alpha > ColorMinimumAlpha) {
+    if ( [pointColor getRed:&red green:&green blue:&blue alpha:&alpha]
+        && alpha > ColorMinimumAlpha) {
         
         self.currentColor = pointColor;
         
@@ -146,7 +153,8 @@ static CGFloat   const ColorMinimumAlpha = 0.1;
     UIColor *pointColor = [self.imageView.image colorAtPixel:touchPoint];
     
     CGFloat red, green, blue, alpha;
-    if ( [pointColor getRed:&red green:&green blue:&blue alpha:&alpha] && alpha > ColorMinimumAlpha) {
+    if ( [pointColor getRed:&red green:&green blue:&blue alpha:&alpha]
+        && alpha > ColorMinimumAlpha) {
         
         self.currentColor = pointColor;
         
@@ -175,7 +183,8 @@ static CGFloat   const ColorMinimumAlpha = 0.1;
 
 - (UIImageView *)imageView {
     if (!_imageView) {
-        _imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"pic_color_wheel"]];
+        _imageView = [[UIImageView alloc] initWithImage:\
+                        [UIImage imageNamed:@"pic_color_wheel"]];
         _imageView.userInteractionEnabled = YES;
     }
     return _imageView;
@@ -183,7 +192,8 @@ static CGFloat   const ColorMinimumAlpha = 0.1;
 
 - (UIImageView *)dragImgView {
     if (!_dragImgView) {
-        _dragImgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"color_ wheel_progress"]];
+        _dragImgView = [[UIImageView alloc] initWithImage:\
+                            [UIImage imageNamed:@"color_ wheel_progress"]];
         _dragImgView.userInteractionEnabled = YES;
     }
     
