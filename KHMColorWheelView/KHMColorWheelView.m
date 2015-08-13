@@ -169,6 +169,19 @@ static CGFloat   const ColorMinimumAlpha = 0.1;
             }
         }
     }
+    
+    //begin and end
+    if (sender.state == UIGestureRecognizerStateBegan) {
+        if (self.pressBeginEvent) {
+            self.pressBeginEvent();
+        }
+    }
+    
+    if (sender.state == UIGestureRecognizerStateEnded) {
+        if (self.pressEndEvent) {
+            self.pressEndEvent();
+        }
+    }
 }
 
 #pragma mark - Getter/Setter

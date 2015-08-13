@@ -17,6 +17,7 @@ static NSInteger const KHMColorWheelViewSize = 230; //因为我使用的图片�
 @interface KHMViewController ()
 @property (nonatomic, weak) IBOutlet KHMColorWheelView *colorWheelView;
 @property (nonatomic, strong) UIImageView *imageView;
+@property (nonatomic, strong) NSTimer *eventTimer;
 
 @end
 
@@ -50,6 +51,14 @@ static NSInteger const KHMColorWheelViewSize = 230; //因为我使用的图片�
     
     self.colorWheelView.colorEventBlock = ^(UIColor *color) {
         NSLog(@"Color About Event");
+    };
+    
+    self.colorWheelView.pressEndEvent = ^{
+        NSLog(@"pressEndEvent");
+    };
+    
+    self.colorWheelView.pressBeginEvent = ^ {
+        NSLog(@"pressBeginEvent");
     };
 }
 
