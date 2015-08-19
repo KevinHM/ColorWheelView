@@ -14,8 +14,8 @@
 		7955843D1B75BB4300F53CB0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7955843B1B75BB4300F53CB0 /* LaunchScreen.xib */; };
 		795584491B75BB4300F53CB0 /* KHMColorWheelDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 795584481B75BB4300F53CB0 /* KHMColorWheelDemoTests.m */; };
 		795584541B75BB8100F53CB0 /* KHMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 795584531B75BB8100F53CB0 /* KHMViewController.m */; };
-		795584581B75BBC700F53CB0 /* KHMColorWheelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 795584571B75BBC700F53CB0 /* KHMColorWheelView.m */; };
-		7955845B1B75BC1200F53CB0 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 7955845A1B75BC1200F53CB0 /* UIImage+Color.m */; };
+		79ADAAE11B84DB7700C744C4 /* KHMColorWheelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79ADAADE1B84DB7700C744C4 /* KHMColorWheelView.m */; };
+		79ADAAE21B84DB7700C744C4 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 79ADAAE01B84DB7700C744C4 /* UIImage+Color.m */; };
 		A2D3F9C2DE1998AAD6CFA055 /* libPods-KHMColorWheelDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EAD95FBDFC0982394409DD9 /* libPods-KHMColorWheelDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -45,10 +45,10 @@
 		795584481B75BB4300F53CB0 /* KHMColorWheelDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KHMColorWheelDemoTests.m; sourceTree = "<group>"; };
 		795584521B75BB8100F53CB0 /* KHMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHMViewController.h; sourceTree = "<group>"; };
 		795584531B75BB8100F53CB0 /* KHMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHMViewController.m; sourceTree = "<group>"; };
-		795584561B75BBC700F53CB0 /* KHMColorWheelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHMColorWheelView.h; sourceTree = "<group>"; };
-		795584571B75BBC700F53CB0 /* KHMColorWheelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHMColorWheelView.m; sourceTree = "<group>"; };
-		795584591B75BC1200F53CB0 /* UIImage+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
-		7955845A1B75BC1200F53CB0 /* UIImage+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
+		79ADAADD1B84DB7700C744C4 /* KHMColorWheelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHMColorWheelView.h; sourceTree = "<group>"; };
+		79ADAADE1B84DB7700C744C4 /* KHMColorWheelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHMColorWheelView.m; sourceTree = "<group>"; };
+		79ADAADF1B84DB7700C744C4 /* UIImage+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
+		79ADAAE01B84DB7700C744C4 /* UIImage+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
 		7EAD95FBDFC0982394409DD9 /* libPods-KHMColorWheelDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KHMColorWheelDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -103,7 +103,7 @@
 		7955842B1B75BB4300F53CB0 /* KHMColorWheelDemo */ = {
 			isa = PBXGroup;
 			children = (
-				795584551B75BBA600F53CB0 /* KHMColorWheelView */,
+				79ADAADC1B84DB7700C744C4 /* KHMColorWheelView */,
 				795584521B75BB8100F53CB0 /* KHMViewController.h */,
 				795584531B75BB8100F53CB0 /* KHMViewController.m */,
 				7955842C1B75BB4300F53CB0 /* Supporting Files */,
@@ -142,16 +142,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		795584551B75BBA600F53CB0 /* KHMColorWheelView */ = {
+		79ADAADC1B84DB7700C744C4 /* KHMColorWheelView */ = {
 			isa = PBXGroup;
 			children = (
-				795584591B75BC1200F53CB0 /* UIImage+Color.h */,
-				7955845A1B75BC1200F53CB0 /* UIImage+Color.m */,
-				795584561B75BBC700F53CB0 /* KHMColorWheelView.h */,
-				795584571B75BBC700F53CB0 /* KHMColorWheelView.m */,
+				79ADAADD1B84DB7700C744C4 /* KHMColorWheelView.h */,
+				79ADAADE1B84DB7700C744C4 /* KHMColorWheelView.m */,
+				79ADAADF1B84DB7700C744C4 /* UIImage+Color.h */,
+				79ADAAE01B84DB7700C744C4 /* UIImage+Color.m */,
 			);
-			path = KHMColorWheelView;
-			sourceTree = SOURCE_ROOT;
+			name = KHMColorWheelView;
+			path = ../../KHMColorWheelView;
+			sourceTree = "<group>";
 		};
 		C3DF83B91EF0D1DF61038D96 /* Frameworks */ = {
 			isa = PBXGroup;
@@ -298,8 +299,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				795584321B75BB4300F53CB0 /* AppDelegate.m in Sources */,
-				795584581B75BBC700F53CB0 /* KHMColorWheelView.m in Sources */,
-				7955845B1B75BC1200F53CB0 /* UIImage+Color.m in Sources */,
+				79ADAAE11B84DB7700C744C4 /* KHMColorWheelView.m in Sources */,
+				79ADAAE21B84DB7700C744C4 /* UIImage+Color.m in Sources */,
 				7955842F1B75BB4300F53CB0 /* main.m in Sources */,
 				795584541B75BB8100F53CB0 /* KHMViewController.m in Sources */,
 			);

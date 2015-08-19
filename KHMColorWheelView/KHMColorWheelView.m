@@ -7,10 +7,8 @@
 
 #import "KHMColorWheelView.h"
 #import "UIImage+Color.h"
-#import <Masonry/Masonry.h>
 
 static NSInteger const DragImageViewSize = 23;
-static CGFloat   const ColorMinimumAlpha = 0.1;
 
 @interface KHMColorWheelView ()
 @property (nonatomic, readwrite, strong) UIColor *currentColor;
@@ -59,15 +57,22 @@ static CGFloat   const ColorMinimumAlpha = 0.1;
 }
 
 - (void)layoutComponents {
-    [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self);
-    }];
     
-    [self.dragImgView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.mas_equalTo(CGSizeMake(DragImageViewSize, DragImageViewSize));
-        make.centerX.equalTo(self.imageView.mas_centerX);
-        make.centerY.equalTo(self.imageView.mas_centerY);
-    }];
+    self.translatesAutoresizingMaskIntoConstraints = NO;
+    self.imageView.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    //TODO: VFL + NSLayoutContraints No masnory
+    
+    
+//    [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.edges.equalTo(self);
+//    }];
+//    
+//    [self.dragImgView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.size.mas_equalTo(CGSizeMake(DragImageViewSize, DragImageViewSize));
+//        make.centerX.equalTo(self.imageView.mas_centerX);
+//        make.centerY.equalTo(self.imageView.mas_centerY);
+//    }];
 }
 
 - (void)setupInteractionsOnComponents {
@@ -112,6 +117,30 @@ static CGFloat   const ColorMinimumAlpha = 0.1;
     return touchPoint;
 }
 
+- (BOOL)validateColor:(UIColor *)color {
+    
+    CGFloat red, green, blue, alpha;
+    [color getRed:&red green:&green blue:&blue alpha:&alpha];
+    
+    if (self.colorMinimumAlpha != 0 && alpha < self.colorMinimumAlpha) {
+        return NO;
+    }
+    
+    if (self.colorMinimumRed != 0 && red < self.colorMinimumRed) {
+        return NO;
+    }
+    
+    if (self.colorMinimumGreen != 0 && green < self.colorMinimumGreen) {
+        return NO;
+    }
+    
+    if (self.colorMinimumBlue != 0 && blue < self.colorMinimumBlue) {
+        return NO;
+    }
+    
+    return YES;
+}
+
 #pragma mark - Event Response
 
 - (void)tapEvent:(UITapGestureRecognizer *)sender {
@@ -121,9 +150,7 @@ static CGFloat   const ColorMinimumAlpha = 0.1;
     UIColor *pointColor = [self.imageView.image colorAtPixel:touchPoint];
     
     //取色满足基本条件则回调颜色并移动接触点
-    CGFloat red, green, blue, alpha;
-    if ( [pointColor getRed:&red green:&green blue:&blue alpha:&alpha]
-        && alpha > ColorMinimumAlpha) {
+    if ( [self validateColor:pointColor] ) {
         
         self.currentColor = pointColor;
         
@@ -152,9 +179,7 @@ static CGFloat   const ColorMinimumAlpha = 0.1;
     
     UIColor *pointColor = [self.imageView.image colorAtPixel:touchPoint];
     
-    CGFloat red, green, blue, alpha;
-    if ( [pointColor getRed:&red green:&green blue:&blue alpha:&alpha]
-        && alpha > ColorMinimumAlpha) {
+    if ([self validateColor:pointColor]) {
         
         self.currentColor = pointColor;
         
