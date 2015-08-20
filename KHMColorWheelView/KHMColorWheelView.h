@@ -25,5 +25,7 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface KHMColorWheelView : UIView
 @property (nonatomic, assign) CGFloat colorMinimumRed UI_APPEARANCE_SELECTOR; /**< 色素点red下限*/
 @property (nonatomic, assign) CGFloat colorMinimumGreen UI_APPEARANCE_SELECTOR; /**< 色素点green下限*/
 @property (nonatomic, assign) CGFloat colorMinimumBlue UI_APPEARANCE_SELECTOR; /**< 色素点blue下限*/
+@property (nonatomic, strong) UIImage *colorWheelBGImage UI_APPEARANCE_SELECTOR; /**< 色轮的地图*/
+@property (nonatomic, strong) UIImage *colorWheelDragImage UI_APPEARANCE_SELECTOR; /**< 色轮上的拖拽指示*/
 
 @end

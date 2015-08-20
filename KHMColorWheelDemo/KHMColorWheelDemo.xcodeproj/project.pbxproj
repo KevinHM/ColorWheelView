@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		792EF8DE1B85B6F700B24A53 /* KHMColorWheel.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 792EF8DD1B85B6F700B24A53 /* KHMColorWheel.bundle */; };
 		7955842F1B75BB4300F53CB0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7955842E1B75BB4300F53CB0 /* main.m */; };
 		795584321B75BB4300F53CB0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 795584311B75BB4300F53CB0 /* AppDelegate.m */; };
 		795584381B75BB4300F53CB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 795584361B75BB4300F53CB0 /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		570BD58F1013ABB2C8326E45 /* Pods-KHMColorWheelDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KHMColorWheelDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KHMColorWheelDemo/Pods-KHMColorWheelDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		6432D1F6F3545C38F25663A6 /* Pods-KHMColorWheelDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KHMColorWheelDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-KHMColorWheelDemo/Pods-KHMColorWheelDemo.release.xcconfig"; sourceTree = "<group>"; };
+		792EF8DD1B85B6F700B24A53 /* KHMColorWheel.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = KHMColorWheel.bundle; sourceTree = "<group>"; };
 		795584291B75BB4300F53CB0 /* KHMColorWheelDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KHMColorWheelDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7955842D1B75BB4300F53CB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7955842E1B75BB4300F53CB0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 		79ADAADC1B84DB7700C744C4 /* KHMColorWheelView */ = {
 			isa = PBXGroup;
 			children = (
+				792EF8DD1B85B6F700B24A53 /* KHMColorWheel.bundle */,
 				79ADAADD1B84DB7700C744C4 /* KHMColorWheelView.h */,
 				79ADAADE1B84DB7700C744C4 /* KHMColorWheelView.m */,
 				79ADAADF1B84DB7700C744C4 /* UIImage+Color.h */,
@@ -245,6 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				792EF8DE1B85B6F700B24A53 /* KHMColorWheel.bundle in Resources */,
 				795584381B75BB4300F53CB0 /* Main.storyboard in Resources */,
 				7955843D1B75BB4300F53CB0 /* LaunchScreen.xib in Resources */,
 				7955843A1B75BB4300F53CB0 /* Images.xcassets in Resources */,

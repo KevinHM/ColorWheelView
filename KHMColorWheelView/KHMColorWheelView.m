@@ -57,6 +57,9 @@ static NSInteger const DragImageViewSize = 23;
 }
 
 - (void)layoutComponents {
+#if DEBUG
+    NSLog(@"self.dragImageSize = %f",self.dragImageViewSize);
+#endif
     
     self.translatesAutoresizingMaskIntoConstraints = NO;
     self.imageView.translatesAutoresizingMaskIntoConstraints = NO;
@@ -78,12 +81,12 @@ static NSInteger const DragImageViewSize = 23;
     [self.imageView addConstraints:\
         [NSLayoutConstraint constraintsWithVisualFormat:@"H:[_dragImgView(==width)]"
                                                 options:NSLayoutFormatDirectionLeadingToTrailing
-                                                metrics:@{@"width" : @(self.dragImageViewSize?:DragImageViewSize)}
+                                                metrics:@{@"width" : @([KHMColorWheelView appearance].dragImageViewSize?:DragImageViewSize)}
                                                   views:NSDictionaryOfVariableBindings(_dragImgView)]];
     [self.imageView addConstraints:\
         [NSLayoutConstraint constraintsWithVisualFormat:@"V:[_dragImgView(==height)]"
                                                 options:NSLayoutFormatDirectionLeadingToTrailing
-                                                metrics:@{@"height" : @(self.dragImageViewSize?:DragImageViewSize)}
+                                                metrics:@{@"height" : @([KHMColorWheelView appearance].dragImageViewSize?:DragImageViewSize)}
                                                   views:NSDictionaryOfVariableBindings(_dragImgView)]];
     
     [self.imageView addConstraint:\
@@ -149,19 +152,19 @@ static NSInteger const DragImageViewSize = 23;
     
     CGFloat red, green, blue, alpha;
     if ([color getRed:&red green:&green blue:&blue alpha:&alpha]) {
-        if (self.colorMinimumAlpha != 0 && alpha < self.colorMinimumAlpha) {
+        if ([KHMColorWheelView appearance].colorMinimumAlpha != 0 && alpha < [KHMColorWheelView appearance].colorMinimumAlpha) {
             return NO;
         }
         
-        if (self.colorMinimumRed != 0 && red < self.colorMinimumRed) {
+        if ([KHMColorWheelView appearance].colorMinimumRed != 0 && red < [KHMColorWheelView appearance].colorMinimumRed) {
             return NO;
         }
         
-        if (self.colorMinimumGreen != 0 && green < self.colorMinimumGreen) {
+        if ([KHMColorWheelView appearance].colorMinimumGreen != 0 && green < [KHMColorWheelView appearance].colorMinimumGreen) {
             return NO;
         }
         
-        if (self.colorMinimumBlue != 0 && blue < self.colorMinimumBlue) {
+        if ([KHMColorWheelView appearance].colorMinimumBlue != 0 && blue < [KHMColorWheelView appearance].colorMinimumBlue) {
             return NO;
         }
         
@@ -251,8 +254,11 @@ static NSInteger const DragImageViewSize = 23;
 
 - (UIImageView *)imageView {
     if (!_imageView) {
-        _imageView = [[UIImageView alloc] initWithImage:\
-                        [UIImage imageNamed:@"pic_color_wheel"]];
+        
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"KHMColorWheel" ofType:@"bundle"];
+        path = [path stringByAppendingPathComponent:@"pic_color_wheel"];
+        UIImage *img = [KHMColorWheelView appearance].colorWheelBGImage ?:[UIImage imageWithContentsOfFile:path];
+        _imageView = [[UIImageView alloc] initWithImage:img];
         _imageView.userInteractionEnabled = YES;
     }
     return _imageView;
@@ -260,8 +266,12 @@ static NSInteger const DragImageViewSize = 23;
 
 - (UIImageView *)dragImgView {
     if (!_dragImgView) {
-        _dragImgView = [[UIImageView alloc] initWithImage:\
-                            [UIImage imageNamed:@"color_ wheel_progress"]];
+        
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"KHMColorWheel" ofType:@"bundle"];
+        path = [path stringByAppendingPathComponent:@"color_ wheel_progress"];
+        UIImage *dragImg = [KHMColorWheelView appearance].colorWheelDragImage ?:[UIImage imageWithContentsOfFile:path];
+        
+        _dragImgView = [[UIImageView alloc] initWithImage:dragImg];
         _dragImgView.userInteractionEnabled = YES;
     }
     
