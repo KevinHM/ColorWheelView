@@ -9,11 +9,11 @@
 
 NS_CLASS_AVAILABLE_IOS(6_0) @interface KHMColorWheelView : UIView
 
-@property (nonatomic, readonly, strong) UIColor *currentColor; /*!< 当前颜色*/
-@property (nonatomic, assign) BOOL continueReponse; /*!< 是否持续响应事件*/
+@property (nonatomic, readonly, strong) UIColor *currentColor; /**< 当前颜色*/
+@property (nonatomic, assign) BOOL continueReponse; /**< 是否持续响应事件*/
 
-@property (nonatomic, copy) void (^colorDidChangedBlock)(UIColor *color); /*!< 颜色变化回调*/
-@property (nonatomic, copy) void (^colorEventBlock)(UIColor *color); /*!< 颜色相关事件回调*/
+@property (nonatomic, copy) void (^colorDidChangedBlock)(UIColor *color); /**< 颜色变化回调*/
+@property (nonatomic, copy) void (^colorEventBlock)(UIColor *color); /**< 颜色相关事件回调*/
 @property (nonatomic, copy) void (^pressBeginEvent)(void); /**< 开始触控*/
 @property (nonatomic, copy) void (^pressEndEvent)(void); /**< 结束触控*/
 
