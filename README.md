@@ -8,5 +8,7 @@ A Simple Color Wheel.
 # Usage
 
 > pod 'KHMColorWheelView', '~> 0.0.6'
-> or 
+
+> or
+
 > pod 'KHMColorWheelView'
