@@ -61,18 +61,46 @@ static NSInteger const DragImageViewSize = 23;
     self.translatesAutoresizingMaskIntoConstraints = NO;
     self.imageView.translatesAutoresizingMaskIntoConstraints = NO;
     
-    //TODO: VFL + NSLayoutContraints No masnory
+    //AL For ImageView
+    [self addConstraints:\
+        [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[_imageView]-0-|"
+                                                options:NSLayoutFormatDirectionLeadingToTrailing
+                                                metrics:nil
+                                                  views:NSDictionaryOfVariableBindings(_imageView)]];
+    [self addConstraints:\
+        [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[_imageView]-0-|"
+                                                options:NSLayoutFormatDirectionLeadingToTrailing
+                                                metrics:nil
+                                                  views:NSDictionaryOfVariableBindings(_imageView)]];
     
     
-//    [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.edges.equalTo(self);
-//    }];
-//    
-//    [self.dragImgView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.size.mas_equalTo(CGSizeMake(DragImageViewSize, DragImageViewSize));
-//        make.centerX.equalTo(self.imageView.mas_centerX);
-//        make.centerY.equalTo(self.imageView.mas_centerY);
-//    }];
+    //AL For DragImgView
+    [self.imageView addConstraints:\
+        [NSLayoutConstraint constraintsWithVisualFormat:@"H:[_dragImgView(==width)]"
+                                                options:NSLayoutFormatDirectionLeadingToTrailing
+                                                metrics:@{@"width" : @(self.dragImageViewSize?:DragImageViewSize)}
+                                                  views:NSDictionaryOfVariableBindings(_dragImgView)]];
+    [self.imageView addConstraints:\
+        [NSLayoutConstraint constraintsWithVisualFormat:@"V:[_dragImgView(==height)]"
+                                                options:NSLayoutFormatDirectionLeadingToTrailing
+                                                metrics:@{@"height" : @(self.dragImageViewSize?:DragImageViewSize)}
+                                                  views:NSDictionaryOfVariableBindings(_dragImgView)]];
+    
+    [self.imageView addConstraint:\
+       [NSLayoutConstraint constraintWithItem:self.dragImgView
+                                    attribute:NSLayoutAttributeCenterX
+                                    relatedBy:NSLayoutRelationEqual
+                                       toItem:self.imageView
+                                    attribute:NSLayoutAttributeCenterX
+                                   multiplier:1.0 constant:0]];
+    
+    [self.imageView addConstraint:\
+        [NSLayoutConstraint constraintWithItem:self.dragImgView
+                                     attribute:NSLayoutAttributeCenterX
+                                     relatedBy:NSLayoutRelationEqual
+                                        toItem:self.imageView
+                                     attribute:NSLayoutAttributeCenterX
+                                    multiplier:1.0 constant:0.0]];
 }
 
 - (void)setupInteractionsOnComponents {
@@ -120,25 +148,27 @@ static NSInteger const DragImageViewSize = 23;
 - (BOOL)validateColor:(UIColor *)color {
     
     CGFloat red, green, blue, alpha;
-    [color getRed:&red green:&green blue:&blue alpha:&alpha];
-    
-    if (self.colorMinimumAlpha != 0 && alpha < self.colorMinimumAlpha) {
-        return NO;
+    if ([color getRed:&red green:&green blue:&blue alpha:&alpha]) {
+        if (self.colorMinimumAlpha != 0 && alpha < self.colorMinimumAlpha) {
+            return NO;
+        }
+        
+        if (self.colorMinimumRed != 0 && red < self.colorMinimumRed) {
+            return NO;
+        }
+        
+        if (self.colorMinimumGreen != 0 && green < self.colorMinimumGreen) {
+            return NO;
+        }
+        
+        if (self.colorMinimumBlue != 0 && blue < self.colorMinimumBlue) {
+            return NO;
+        }
+        
+        return YES;
     }
     
-    if (self.colorMinimumRed != 0 && red < self.colorMinimumRed) {
-        return NO;
-    }
-    
-    if (self.colorMinimumGreen != 0 && green < self.colorMinimumGreen) {
-        return NO;
-    }
-    
-    if (self.colorMinimumBlue != 0 && blue < self.colorMinimumBlue) {
-        return NO;
-    }
-    
-    return YES;
+    return NO;
 }
 
 #pragma mark - Event Response

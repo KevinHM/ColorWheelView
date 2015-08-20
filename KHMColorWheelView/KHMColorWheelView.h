@@ -8,6 +8,7 @@
 #import <UIKit/UIKit.h>
 
 NS_CLASS_AVAILABLE_IOS(6_0) @interface KHMColorWheelView : UIView
+
 @property (nonatomic, readonly, strong) UIColor *currentColor; /*!< 当前颜色*/
 @property (nonatomic, assign) BOOL continueReponse; /*!< 是否持续响应事件*/
 

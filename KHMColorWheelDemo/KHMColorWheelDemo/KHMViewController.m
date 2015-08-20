@@ -37,6 +37,9 @@ static NSInteger const KHMColorWheelViewSize = 230; //因为我使用的图片�
 
 - (void)defaultConfiguration {
     
+    [[KHMColorWheelView appearance] setColorMinimumAlpha:.1f];
+    [[KHMColorWheelView appearance] setDragImageViewSize:23.f];
+    
     self.view.backgroundColor = [UIColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:0.5];
     self.colorWheelView.layer.cornerRadius = (KHMColorWheelViewSize) / 2.0;
     self.colorWheelView.layer.masksToBounds = YES;
