@@ -9,7 +9,6 @@
 #import "KHMViewController.h"
 
 #import "KHMColorWheelView.h"
-#import "UIImage+Color.h"
 #import <Masonry/Masonry.h>
 
 static NSInteger const KHMColorWheelViewSize = 230; //因为我使用的图片为这个尺寸 @2x\@3x
