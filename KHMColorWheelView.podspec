@@ -10,7 +10,6 @@ s.source		= { :git => "https://github.com/KevinHM/ColorWheelView.git", :tag => "
 s.source_files	= "KHMColorWheelView", "KHMColorWheelView/KHMColorWheelView/*.{h,m}"
 s.public_header_files = "KHMColorWheelView/**/*.h"
 s.requires_arc	= true
-
 s.platform		= :ios
 s.platform		= :ios, "6.0"
 
