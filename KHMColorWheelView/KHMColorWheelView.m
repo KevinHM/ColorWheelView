@@ -36,9 +36,12 @@ static NSInteger const DragImageViewSize = 23;
 //- (instancetype)initWithCoder:(NSCoder *)aDecoder {
 //    self = [super initWithCoder:aDecoder];
 //    if (self) {
-//     
+//     [self setupDefaultVariables];
+//     [self configuredViewHierarchy];
+//     [self layoutComponents];
+//     [self setupInteractionsOnComponents];
 //    }
-//    
+//
 //    return self;
 //}
 
