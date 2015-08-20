@@ -1,5 +1,6 @@
 # KHMColorWheelView
-A Simple Color Wheel.
+
+A lightweight color wheel view and it work fine for arbitrary shape. enjoy!
 
 # Demo Gif
 
