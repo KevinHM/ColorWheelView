@@ -33,16 +33,21 @@ static NSInteger const DragImageViewSize = 23;
 }
 
 //Support IB
-- (instancetype)initWithCoder:(NSCoder *)aDecoder {
-    self = [super initWithCoder:aDecoder];
-    if (self) {
-        [self setupDefaultVariables];
-        [self configuredViewHierarchy];
-        [self layoutComponents];
-        [self setupInteractionsOnComponents];
-    }
-    
-    return self;
+//- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+//    self = [super initWithCoder:aDecoder];
+//    if (self) {
+//     
+//    }
+//    
+//    return self;
+//}
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    [self setupDefaultVariables];
+    [self configuredViewHierarchy];
+    [self layoutComponents];
+    [self setupInteractionsOnComponents];
 }
 
 #pragma mark - private method
@@ -57,22 +62,23 @@ static NSInteger const DragImageViewSize = 23;
 }
 
 - (void)layoutComponents {
+    
 #if DEBUG
-    NSLog(@"self.dragImageSize = %f",self.dragImageViewSize);
+    NSLog(@"self.dragImageSize = %f",[KHMColorWheelView appearance].dragImageViewSize);
 #endif
     
-    self.translatesAutoresizingMaskIntoConstraints = NO;
     self.imageView.translatesAutoresizingMaskIntoConstraints = NO;
+    self.dragImgView.translatesAutoresizingMaskIntoConstraints = NO;
     
     //AL For ImageView
     [self addConstraints:\
         [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[_imageView]-0-|"
-                                                options:NSLayoutFormatDirectionLeadingToTrailing
+                                                options:0
                                                 metrics:nil
                                                   views:NSDictionaryOfVariableBindings(_imageView)]];
     [self addConstraints:\
         [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[_imageView]-0-|"
-                                                options:NSLayoutFormatDirectionLeadingToTrailing
+                                                options:0
                                                 metrics:nil
                                                   views:NSDictionaryOfVariableBindings(_imageView)]];
     
@@ -80,12 +86,12 @@ static NSInteger const DragImageViewSize = 23;
     //AL For DragImgView
     [self.imageView addConstraints:\
         [NSLayoutConstraint constraintsWithVisualFormat:@"H:[_dragImgView(==width)]"
-                                                options:NSLayoutFormatDirectionLeadingToTrailing
+                                                options:0
                                                 metrics:@{@"width" : @([KHMColorWheelView appearance].dragImageViewSize?:DragImageViewSize)}
                                                   views:NSDictionaryOfVariableBindings(_dragImgView)]];
     [self.imageView addConstraints:\
         [NSLayoutConstraint constraintsWithVisualFormat:@"V:[_dragImgView(==height)]"
-                                                options:NSLayoutFormatDirectionLeadingToTrailing
+                                                options:0
                                                 metrics:@{@"height" : @([KHMColorWheelView appearance].dragImageViewSize?:DragImageViewSize)}
                                                   views:NSDictionaryOfVariableBindings(_dragImgView)]];
     
@@ -99,10 +105,10 @@ static NSInteger const DragImageViewSize = 23;
     
     [self.imageView addConstraint:\
         [NSLayoutConstraint constraintWithItem:self.dragImgView
-                                     attribute:NSLayoutAttributeCenterX
+                                     attribute:NSLayoutAttributeCenterY
                                      relatedBy:NSLayoutRelationEqual
                                         toItem:self.imageView
-                                     attribute:NSLayoutAttributeCenterX
+                                     attribute:NSLayoutAttributeCenterY
                                     multiplier:1.0 constant:0.0]];
 }
 
