@@ -6,6 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIImage+Color.h"
 
 NS_CLASS_AVAILABLE_IOS(6_0) @interface KHMColorWheelView : UIView
 

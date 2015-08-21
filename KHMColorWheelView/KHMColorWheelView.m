@@ -6,7 +6,7 @@
 //
 
 #import "KHMColorWheelView.h"
-#import "UIImage+Color.h"
+
 
 static NSInteger const DragImageViewSize = 23;
 
